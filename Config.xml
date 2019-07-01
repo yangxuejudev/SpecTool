@@ -1,0 +1,29 @@
+
+<SpecTool>
+<!--服务器上最新软件的版本号，更改这个会向使用者推送新版本-->
+<Version>2019-07-01</Version>
+
+<!--各版本gms包的截止期限，工具的gms包检查依赖于这里的值-->
+<GmsPackage>
+<package version="8.1_201812" start="2018-12-15" end="2019-12-31"/>
+<package version="9_201902" start="2019-02-15" end="2019-05-16"/>
+<package version="9_201903" start="2019-03-15" end="2019-06-16"/>
+<package version="9_201905" start="2019-07-15" end="2019-10-16"/>
+</GmsPackage>
+
+<!--测试工具的截止期限-->
+<TestTool>
+<tool name="CTS_8.1R15" start="2019-06-20" end="2019-09-24"/>
+<tool name="VTS_8.1R8" start="2019-06-20" end="2019-09-24"/>
+<tool name="CTS_9.0R8" start="2019-06-20" end="2019-09-24"/>
+<tool name="VTS_9.0R9" start="2019-06-20" end="2019-09-24"/>
+<tool name="GTS_6.0R4" start="2019-04-15" end="2019-08-10"/>
+
+</TestTool>
+
+<!--发布的通知，将会推送给用户-->
+<Broadcast priority="high">
+1.STS工具版本请根据安全日期来选择。
+2.测试工具截止日期可能不准确。
+</Broadcast>
+</SpecTool>
