@@ -1,7 +1,7 @@
 
 <SpecTool>
 <!--服务器上最新软件的版本号，更改这个会向使用者推送新版本-->
-<Version>2019-07-01</Version>
+<Version>2019-08-30</Version>
 
 <!--各版本gms包的截止期限，工具的gms包检查依赖于这里的值-->
 <GmsPackage>
@@ -17,13 +17,30 @@
 <tool name="VTS_8.1R8" start="2019-06-20" end="2019-09-24"/>
 <tool name="CTS_9.0R8" start="2019-06-20" end="2019-09-24"/>
 <tool name="VTS_9.0R9" start="2019-06-20" end="2019-09-24"/>
-<tool name="GTS_6.0R4" start="2019-04-15" end="2019-08-10"/>
+<tool name="GTS_6.0R4" start="2019-04-15" end="2019-08-14"/>
 
 </TestTool>
 
 <!--发布的通知，将会推送给用户-->
 <Broadcast priority="high">
-1.STS工具版本请根据安全日期来选择。
-2.测试工具截止日期可能不准确。
+1. Launch Approval Windows：
+  Android 8.1 go edition new device /
+ new product /new SW build 窗口期为2019年10月31号。
+  Android 9.0 (含go edition) new device /
+ new product 窗口期为2019年12月31号。
+
+2.Google BTS 最新扫描出ManagerProvisioning 问题，
+ 需合入 patch CVE-2018-9586解决.
+
+3.android.security.cts.StagefrightTest#
+ testStagefright_cve_2017_18155,申请patch.
+
+4.High uplink traffic issue from old Android devices.
+
+5.GooglePackageInstaller security update for CVE-2019-2114.
+
+6.Any 3rd-party app can modify the "persist.mtk.wfc.mccmnc_list"
+ system property via exported WfoService to make Wifi Calling
+ feature unable to use，申请patch ALPS04678943
 </Broadcast>
 </SpecTool>

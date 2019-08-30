@@ -1,2 +1,0 @@
-# SpecTool
-for GMS Spec
